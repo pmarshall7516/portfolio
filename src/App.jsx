@@ -9,6 +9,7 @@ import ProjectsSimulations from "./pages/ProjectsSimulations.jsx";
 import ProjectsMicroservices from "./pages/ProjectsMicroservices.jsx";
 import ProjectsAll from "./pages/ProjectsAll.jsx";
 import ProjectHorseRace from "./pages/ProjectHorseRace.jsx";
+import ProjectSearchAlgoVisualizer from "./pages/ProjectSearchAlgoVisualizer.jsx";
 import ProjectMicroservicesBlank from "./pages/ProjectMicroservicesBlank.jsx";
 
 export default function App() {
@@ -26,6 +27,10 @@ export default function App() {
           <Route path="/projects/all" element={<ProjectsAll />} />
           <Route path="/projects/simulations" element={<ProjectsSimulations />} />
           <Route path="/projects/simulations/horse-race" element={<ProjectHorseRace />} />
+          <Route
+            path="/projects/simulations/search-algo-visualizer"
+            element={<ProjectSearchAlgoVisualizer />}
+          />
           <Route path="/projects/microservices" element={<ProjectsMicroservices />} />
           <Route
             path="/projects/microservices/blank"

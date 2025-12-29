@@ -1,9 +1,17 @@
 export const projects = [
   {
     title: "Horse Race",
-    description: "Dummy description for the horse race simulation project.",
-    badges: ["Simulation", "React", "Canvas"],
+    description: "Probability and statistics simulation using the horse racing family board game.",
+    badges: ["Simulation", "React", "Web App", "Statistics"],
     to: "/projects/simulations/horse-race",
+    icon: "SIM",
+    category: "Simulations",
+  },
+  {
+    title: "Search Algorithm Visualizer",
+    description: "Visualize Dijkstra and A* search algorithms on a customizable grid.",
+    badges: ["Algorithms", "Simulation", "React", "Search"],
+    to: "/projects/simulations/search-algo-visualizer",
     icon: "SIM",
     category: "Simulations",
   },
@@ -15,6 +23,7 @@ export const projects = [
     icon: "MS",
     category: "Microservices",
   },
+
 ];
 
 export const projectCategories = [

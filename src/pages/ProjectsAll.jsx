@@ -4,6 +4,9 @@ import { projects } from "../data/projects.js";
 export default function ProjectsAll() {
   return (
     <section className="page">
+      <Link className="text-link back-link" to="/projects">
+        ← Back
+      </Link>
       <div className="panel section-header">
         <h1>All Projects</h1>
         <p>Every project across simulations and microservices.</p>

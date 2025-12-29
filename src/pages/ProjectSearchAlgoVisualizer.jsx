@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 
-export default function ProjectHorseRace() {
+export default function ProjectSearchAlgoVisualizer() {
   return (
     <section className="page">
       <Link className="text-link back-link" to="/projects/simulations">
         ← Back
       </Link>
       <div className="panel section-header">
-        <h1>Horse Race</h1>
-        <p>Probability and statistics simulation using the horse racing family board game.</p>
+        <h1>Search Algorithm Visualizer</h1>
+        <p>Visualize Dijkstra and A* Algorithms using a customizable search grid.</p>
       </div>
       <div className="panel frame-panel">
         <iframe
-          title="Horse Race Simulation"
+          title="Search Algorithm Visualizer"
           className="project-frame"
-          src="/horse-race/index.html"
+          src="/search-algo-visualizer/index.html"
         />
       </div>
     </section>
