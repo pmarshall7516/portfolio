@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function ProjectBehavioralControl() {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <section className="page">
       <Link className="text-link back-link" to="/projects/ai-ml">
@@ -16,7 +18,7 @@ export default function ProjectBehavioralControl() {
         <iframe
           title="Behavioral Control Demo"
           className="project-frame"
-          src="/behavioral-control/index.html"
+          src={`${baseUrl}behavioral-control/index.html`}
         />
       </div>
     </section>

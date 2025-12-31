@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function ProjectSearchAlgoVisualizer() {
   const tabs = ["JavaScript", "Python", "C++"];
+  const baseUrl = import.meta.env.BASE_URL;
   const pseudocode = {
     dijkstra: {
       JavaScript: `function dijkstra(grid, start, goal) {
@@ -168,7 +169,7 @@ export default function ProjectSearchAlgoVisualizer() {
         <iframe
           title="Search Algorithm Visualizer"
           className="project-frame"
-          src="/search-algo-visualizer/index.html"
+          src={`${baseUrl}search-algo-visualizer/index.html`}
         />
       </div>
       <div className="algo-grid">
