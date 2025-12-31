@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { projects } from "../data/projects.js";
 
 export default function ProjectsAll() {
+  const sortedProjects = [...projects].sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
+
   return (
     <section className="page">
       <Link className="text-link back-link" to="/projects">
@@ -11,8 +15,8 @@ export default function ProjectsAll() {
         <h1>All Projects</h1>
         <p>Every project across simulations and microservices.</p>
       </div>
-      <div className="grid cards-grid">
-        {projects.map((project) => (
+      <div className="grid project-detail-grid">
+        {sortedProjects.map((project) => (
           <article key={project.title} className="panel project-detail-card">
             <div className="project-icon">{project.icon}</div>
             <div className="project-copy">

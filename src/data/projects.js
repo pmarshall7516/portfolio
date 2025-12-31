@@ -16,6 +16,14 @@ export const projects = [
     category: "Simulations",
   },
   {
+    title: "Behavioral Control",
+    description: "Behavioral Actor-Critic framework for controllable reinforcement learning.",
+    badges: ["AI", "Reinforcement Learning", "Control"],
+    to: "/projects/ai-ml/behavioral-control",
+    icon: "AIML",
+    category: "AI/Machine Learning",
+  },
+  {
     title: "Service Mesh Prototype",
     description: "Dummy description for a microservices project placeholder.",
     badges: ["Microservices", "Docker", "API"],
@@ -41,5 +49,10 @@ export const projectCategories = [
     title: "Simulations",
     description: "Simulate games or physical systems with real-time visualization.",
     to: "/projects/simulations",
+  },
+  {
+    title: "AI/Machine Learning",
+    description: "Projects focused on artificial intelligence and machine learning techniques.",
+    to: "/projects/ai-ml",
   },
 ];

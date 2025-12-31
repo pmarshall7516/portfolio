@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects.js";
 
-const simulationProjects = projects.filter(
-  (project) => project.category === "Simulations"
+const aiMlProjects = projects.filter(
+  (project) => project.category === "AI/Machine Learning"
 );
-const sortedSimulationProjects = [...simulationProjects].sort((a, b) =>
+const sortedAiMlProjects = [...aiMlProjects].sort((a, b) =>
   a.title.localeCompare(b.title)
 );
 
-export default function ProjectsSimulations() {
+export default function ProjectsAIML() {
   return (
     <section className="page">
       <Link className="text-link back-link" to="/projects">
         ← Back
       </Link>
       <div className="panel section-header">
-        <h1>Simulations</h1>
-        <p>Interactive simulations and system models.</p>
+        <h1>AI / Machine Learning</h1>
+        <p>Projects focused on intelligent systems and reinforcement learning.</p>
       </div>
       <div className="grid project-detail-grid">
-        {sortedSimulationProjects.map((project) => (
+        {sortedAiMlProjects.map((project) => (
           <article key={project.title} className="panel project-detail-card">
             <div className="project-icon">{project.icon}</div>
             <div className="project-copy">

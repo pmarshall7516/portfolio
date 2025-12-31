@@ -7,9 +7,11 @@ import Research from "./pages/Research.jsx";
 import Projects from "./pages/Projects.jsx";
 import ProjectsSimulations from "./pages/ProjectsSimulations.jsx";
 import ProjectsMicroservices from "./pages/ProjectsMicroservices.jsx";
+import ProjectsAIML from "./pages/ProjectsAIML.jsx";
 import ProjectsAll from "./pages/ProjectsAll.jsx";
 import ProjectHorseRace from "./pages/ProjectHorseRace.jsx";
 import ProjectSearchAlgoVisualizer from "./pages/ProjectSearchAlgoVisualizer.jsx";
+import ProjectBehavioralControl from "./pages/ProjectBehavioralControl.jsx";
 import ProjectMicroservicesBlank from "./pages/ProjectMicroservicesBlank.jsx";
 
 export default function App() {
@@ -30,6 +32,11 @@ export default function App() {
           <Route
             path="/projects/simulations/search-algo-visualizer"
             element={<ProjectSearchAlgoVisualizer />}
+          />
+          <Route path="/projects/ai-ml" element={<ProjectsAIML />} />
+          <Route
+            path="/projects/ai-ml/behavioral-control"
+            element={<ProjectBehavioralControl />}
           />
           <Route path="/projects/microservices" element={<ProjectsMicroservices />} />
           <Route

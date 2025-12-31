@@ -4,6 +4,9 @@ import { projects } from "../data/projects.js";
 const microserviceProjects = projects.filter(
   (project) => project.category === "Microservices"
 );
+const sortedMicroserviceProjects = [...microserviceProjects].sort((a, b) =>
+  a.title.localeCompare(b.title)
+);
 
 export default function ProjectsMicroservices() {
   return (
@@ -15,8 +18,8 @@ export default function ProjectsMicroservices() {
         <h1>Microservices</h1>
         <p>Distributed systems and service-oriented experiments.</p>
       </div>
-      <div className="grid cards-grid">
-        {microserviceProjects.map((project) => (
+      <div className="grid project-detail-grid">
+        {sortedMicroserviceProjects.map((project) => (
           <article key={project.title} className="panel project-detail-card">
             <div className="project-icon">{project.icon}</div>
             <div className="project-copy">

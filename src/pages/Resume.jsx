@@ -3,11 +3,8 @@ export default function Resume() {
     <section className="page">
       <div className="panel section-header">
         <h1>Resume</h1>
-        <p>Download or view the latest resume below.</p>
+        <p>Download or view my latest resume below!</p>
         <div className="pill-row">
-          <a className="nav-pill" href="/resumes/resume.pdf" target="_blank" rel="noreferrer">
-            Open PDF
-          </a>
           <a className="nav-pill nav-pill--accent" href="/resumes/resume.pdf" download>
             Download
           </a>
