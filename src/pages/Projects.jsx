@@ -11,8 +11,7 @@ export default function Projects() {
   return (
     <section className="page">
       <div className="panel section-header">
-        <h1>Projects</h1>
-        <p>Project Categories</p>
+        <h1>Project Categories</h1>
       </div>
       <div className="grid project-detail-grid">
         {sortedCategories.map((category) => (

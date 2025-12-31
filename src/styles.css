@@ -60,11 +60,45 @@ a {
   border-bottom: 1px solid rgba(71, 244, 255, 0.08);
 }
 
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-split {
+  justify-content: center;
+}
+
+.nav-name {
+  font-size: 20px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 0 12px;
+}
+
 .nav-bar {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.nav-bar--left,
+.nav-bar--right {
+  flex: 1;
+  min-width: 220px;
+}
+
+.nav-bar--left {
+  justify-content: flex-end;
+}
+
+.nav-bar--right {
+  justify-content: flex-start;
 }
 
 .nav-pill {
@@ -195,6 +229,37 @@ a {
   border-radius: 14px;
   padding: 18px;
   border: 1px dashed rgba(71, 244, 255, 0.35);
+}
+
+.contact-panel h2 {
+  margin-bottom: 16px;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.contact-card {
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(7, 10, 18, 0.35);
+  border: 1px solid rgba(71, 244, 255, 0.2);
+}
+
+.contact-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.contact-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .pdf-panel {

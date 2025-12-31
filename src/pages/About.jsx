@@ -1,4 +1,6 @@
 export default function About() {
+  const profileImage = `${import.meta.env.BASE_URL}profile-placeholder.svg`;
+
   return (
     <section className="page about-page">
       <div className="hero-grid">
@@ -18,7 +20,7 @@ export default function About() {
         </div>
         <div className="panel hero-panel image-panel">
           <img
-            src="/profile-placeholder.svg"
+            src={profileImage}
             alt="Profile placeholder"
             className="profile-image"
           />
@@ -28,10 +30,24 @@ export default function About() {
       <div className="panel latex-panel">
         <h2>About Me</h2>
         <div className="latex-text">
-          I'm Patrick Marshall, a M.S. Machine Learning student at Milwaukee School of Engineering, with a focus on building practical systems that bridge modern AI with high-performance computing. 
+          I'm <strong>Patrick Marshall</strong>, a M.S. Machine Learning student at Milwaukee School of Engineering, with a focus on building practical systems that bridge modern AI with high-performance computing. 
           As a Software Engineer Contractor at GE Healthcare, I work on GPU benchmarking and workload analysis by automating suites in Docker, comparing CUDA and SYCL performance, and using Nsight tools to understand kernel behavior across real hardware configurations. 
           In my undergraduate research, I co-developed the Behavioral Actor-Critic (BAC) framework: an ensemble actor-critic approach that uses reward decomposition, scalarization-based policy aggregation, and surrogate optimization to let users tune an RL agent's behavior after training.
           Outside of coursework, I'm involved in MSOE's AI Club and bring a disciplined, team-first mindset from competing on the MSOE NCAA Men's Soccer team.  
+        </div>
+      </div>
+
+      <div className="panel contact-panel">
+        <h2>Contact</h2>
+        <div className="contact-grid">
+          <div className="contact-card">
+            <p className="contact-label">Email</p>
+            <p className="contact-value">patrick.wayne.marshall@gmail.com</p>
+          </div>
+          <div className="contact-card">
+            <p className="contact-label">Phone</p>
+            <p className="contact-value">(815) 715-6134</p>
+          </div>
         </div>
       </div>
     </section>
