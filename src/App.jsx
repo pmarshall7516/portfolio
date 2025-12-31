@@ -43,6 +43,7 @@ export default function App() {
             path="/projects/microservices/blank"
             element={<ProjectMicroservicesBlank />}
           />
+          <Route path="*" element={<Navigate to="/about" replace />} />
         </Routes>
       </main>
     </div>
