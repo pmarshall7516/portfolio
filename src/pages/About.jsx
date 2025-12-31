@@ -1,5 +1,15 @@
 export default function About() {
-  const profileImage = `${import.meta.env.BASE_URL}profile-placeholder.svg`;
+  const profileImage = `${import.meta.env.BASE_URL}portfolio-pic.png`;
+  const fallbackProfileImage = "/portfolio-pic.png";
+
+  const handleProfileError = (event) => {
+    const img = event.currentTarget;
+    if (img.dataset.fallback === "true") {
+      return;
+    }
+    img.dataset.fallback = "true";
+    img.src = fallbackProfileImage;
+  };
 
   return (
     <section className="page about-page">
@@ -23,6 +33,7 @@ export default function About() {
             src={profileImage}
             alt="Profile placeholder"
             className="profile-image"
+            onError={handleProfileError}
           />
         </div>
       </div>
