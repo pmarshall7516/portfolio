@@ -220,6 +220,59 @@ export default function ProjectSearchAlgoVisualizer() {
           </div>
         </article>
       </div>
+
+      <div className="panel section-header">
+        <h2>Algorithm Deep Dive</h2>
+        <p>Both algorithms guarantee shortest paths on weighted grids, but they search the space differently.</p>
+      </div>
+      <div className="algo-detail-grid">
+        <article className="panel algo-detail-card">
+          <h3>Dijkstra: Guaranteed shortest path</h3>
+          <ul className="detail-list">
+            <li>
+              <strong>How it works:</strong> Expands nodes in order of smallest known distance from the start using relaxation and a priority queue.
+            </li>
+            <li>
+              <strong>Strengths:</strong> Optimal with non-negative weights, no heuristic required, reliable baseline on weighted graphs.
+            </li>
+            <li>
+              <strong>Trade-offs:</strong> Explores broadly, so it can visit many nodes that are far from the goal.
+            </li>
+          </ul>
+        </article>
+        <article className="panel algo-detail-card">
+          <h3>A*: Goal-directed search</h3>
+          <ul className="detail-list">
+            <li>
+              <strong>How it works:</strong> Prioritizes nodes by f(n)=g(n)+h(n), combining path cost so far with a heuristic estimate to the goal.
+            </li>
+            <li>
+              <strong>Strengths:</strong> With an admissible heuristic, it stays optimal while expanding fewer nodes in practice.
+            </li>
+            <li>
+              <strong>Trade-offs:</strong> Heuristic quality matters; a weak heuristic behaves like Dijkstra, and overestimates can lose optimality.
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div className="panel">
+        <h2>Why A* Is Faster in Most Cases</h2>
+        <p className="muted-text">
+          A* uses problem knowledge to focus the search. On grid maps with Manhattan or Euclidean heuristics, it typically expands fewer nodes than Dijkstra.
+        </p>
+        <ul className="detail-list">
+          <li>
+            <strong>Focused frontier:</strong> The heuristic pulls exploration toward the goal instead of radiating evenly.
+          </li>
+          <li>
+            <strong>Earlier convergence:</strong> Promising routes rise to the top of the priority queue sooner.
+          </li>
+          <li>
+            <strong>Same guarantees:</strong> With an admissible heuristic, A* remains optimal but does less work.
+          </li>
+        </ul>
+      </div>
     </section>
   );
 }
