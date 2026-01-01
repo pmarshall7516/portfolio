@@ -14,10 +14,32 @@ export default function ProjectBehavioralControl() {
       <Link className="text-link back-link" to="/projects/ai-ml">
         ← Back
       </Link>
-      <div className="panel section-header">
+      <div className="panel section-header features-panel">
         <h1>Behavioral Control</h1>
         <p>
           Behavioral Actor-Critic (BAC) framework for controllable reinforcement learning.
+        </p>
+      </div>
+      <div className="panel section-header">
+        <h2>Features</h2>
+        <p>
+          This Simulation allows users to observe and interact with RL agents within a Stratego-like environment.<br></br>
+        </p>
+        <h3>Configuration Settings</h3>
+        <ol className="features-list features-list--numbered">
+          <li>Pick your opponent: random action agent, trained agent, or a human user.</li>
+          <li>Adjust scalarization weights mid-match to steer reward priorities.</li>
+          <li>Toggle agent behaviors and exploration settings in real time.</li>
+        </ol>
+        <h3>Capability Checklist</h3>
+        <ul className="features-list features-list--bulleted">
+          <li>Play as the user agent to test strategies against different policies.</li>
+          <li>Swap between random and trained agents to compare behavior shifts.</li>
+          <li>Use live graphs to watch behavior metrics change over time.</li>
+        </ul>
+        <p>
+          Tune the environment while the simulation runs and immediately see how
+          behavior adapts as scalarization values shift.
         </p>
       </div>
       <div className="panel frame-panel">

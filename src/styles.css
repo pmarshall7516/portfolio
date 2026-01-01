@@ -158,6 +158,27 @@ a {
   color: var(--muted);
 }
 
+.features-panel ol,
+.features-panel ul {
+  padding-left: 64px;
+  margin-left: 20px;
+  list-style-position: outside;
+}
+
+.features-list {
+  padding-left: 20px !important;
+  margin-left: 24px !important;
+  list-style-position: outside;
+}
+
+.features-list--numbered {
+  list-style-type: decimal;
+}
+
+.features-list--bulleted {
+  list-style-type: disc;
+}
+
 .hero-grid {
   display: grid;
   gap: 24px;
