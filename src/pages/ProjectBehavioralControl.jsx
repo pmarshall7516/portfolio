@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function ProjectBehavioralControl() {
   const baseUrl = import.meta.env.BASE_URL;
+  const apiBase = import.meta.env.VITE_BEHAVIORAL_CONTROL_URL;
+  const iframeSrc = apiBase
+    ? `${baseUrl}behavioral-control/index.html?apiBase=${encodeURIComponent(apiBase)}`
+    : `${baseUrl}behavioral-control/index.html`;
 
   return (
     <section className="page">
@@ -18,7 +22,7 @@ export default function ProjectBehavioralControl() {
         <iframe
           title="Behavioral Control Demo"
           className="project-frame"
-          src={`${baseUrl}behavioral-control/index.html`}
+          src={iframeSrc}
         />
       </div>
     </section>
