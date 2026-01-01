@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 import sys
 import uuid
@@ -780,7 +781,9 @@ def _advance_session_user(
     return _build_state(session, events=events, moves=moves)
 
 
-def run_server(host: str = "127.0.0.1", port: int = 8000) -> None:
+def run_server(host: Optional[str] = None, port: Optional[int] = None) -> None:
+    host = host or os.environ.get("HOST", "0.0.0.0")
+    port = port or int(os.environ.get("PORT", "8000"))
     server = ThreadingHTTPServer((host, port), StrategoHandler)
     print(f"Stratego inference server running on http://{host}:{port}")
     try:
