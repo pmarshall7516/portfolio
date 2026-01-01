@@ -179,6 +179,12 @@ a {
   list-style-type: disc;
 }
 
+.section-header .feature-note {
+  margin-top: 14px;
+  color: var(--gold);
+  font-style: italic;
+}
+
 .hero-grid {
   display: grid;
   gap: 24px;

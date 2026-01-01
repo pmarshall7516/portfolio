@@ -41,6 +41,11 @@ export default function ProjectBehavioralControl() {
           Tune the environment while the simulation runs and immediately see how
           behavior adapts as scalarization values shift.
         </p>
+        <p className="feature-note">
+          * Note: If the Simulation grid is empty and/or not the correct size, click
+          the "Start" button and wait about a minute. Refresh if it still has not
+          changed.
+        </p>
       </div>
       <div className="panel frame-panel">
         <iframe
