@@ -13,6 +13,15 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const apiBase = params.get("apiBase");
+        if (apiBase) {
+          window.__BC_API_BASE__ = apiBase;
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="./assets/index-CwSkpyi2.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-B3_YlF_y.css">
   </head>
