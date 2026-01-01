@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import useIframeAutoHeight from "../hooks/useIframeAutoHeight.js";
 
 export default function ProjectHorseRace() {
   const baseUrl = import.meta.env.BASE_URL;
+  const { frameRef, onLoad } = useIframeAutoHeight();
 
   return (
     <section className="page">
@@ -17,6 +19,8 @@ export default function ProjectHorseRace() {
           title="Horse Race Simulation"
           className="project-frame"
           src={`${baseUrl}horse-race/index.html`}
+          ref={frameRef}
+          onLoad={onLoad}
         />
       </div>
     </section>

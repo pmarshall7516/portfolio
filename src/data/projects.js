@@ -23,15 +23,6 @@ export const projects = [
     icon: "AIML",
     category: "AI/Machine Learning",
   },
-  {
-    title: "Service Mesh Prototype",
-    description: "Dummy description for a microservices project placeholder.",
-    badges: ["Microservices", "Docker", "API"],
-    to: "/projects/microservices/blank",
-    icon: "MS",
-    category: "Microservices",
-  },
-
 ];
 
 export const projectCategories = [

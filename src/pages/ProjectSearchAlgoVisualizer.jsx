@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useIframeAutoHeight from "../hooks/useIframeAutoHeight.js";
 
 export default function ProjectSearchAlgoVisualizer() {
   const tabs = ["JavaScript", "Python", "C++"];
   const baseUrl = import.meta.env.BASE_URL;
+  const { frameRef, onLoad } = useIframeAutoHeight();
   const pseudocode = {
     dijkstra: {
       JavaScript: `function dijkstra(grid, start, goal) {
@@ -170,6 +172,8 @@ export default function ProjectSearchAlgoVisualizer() {
           title="Search Algorithm Visualizer"
           className="project-frame"
           src={`${baseUrl}search-algo-visualizer/index.html`}
+          ref={frameRef}
+          onLoad={onLoad}
         />
       </div>
       <div className="algo-grid">
