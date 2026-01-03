@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horde Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const apiBase = params.get("apiBase");
+        if (apiBase) {
+          window.__HORDE_API_URL__ = apiBase;
+          window.__API_BASE__ = apiBase;
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-B_9x0QvA.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CzNy2-R4.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

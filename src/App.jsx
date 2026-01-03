@@ -12,6 +12,7 @@ import ProjectsAll from "./pages/ProjectsAll.jsx";
 import ProjectHorseRace from "./pages/ProjectHorseRace.jsx";
 import ProjectSearchAlgoVisualizer from "./pages/ProjectSearchAlgoVisualizer.jsx";
 import ProjectBehavioralControl from "./pages/ProjectBehavioralControl.jsx";
+import ProjectHorde from "./pages/ProjectHorde.jsx";
 import ProjectMicroservicesBlank from "./pages/ProjectMicroservicesBlank.jsx";
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
             path="/projects/ai-ml/behavioral-control"
             element={<ProjectBehavioralControl />}
           />
+          <Route path="/projects/ai-ml/horde" element={<ProjectHorde />} />
           <Route path="/projects/microservices" element={<ProjectsMicroservices />} />
           <Route
             path="/projects/microservices/blank"

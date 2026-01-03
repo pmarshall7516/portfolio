@@ -23,6 +23,14 @@ export const projects = [
     icon: "AIML",
     category: "AI/Machine Learning",
   },
+  {
+    title: "Horde TCG",
+    description: "Custom card game simulation showcasing reinforcement learning agents.",
+    badges: ["AI", "Reinforcement Learning", "Simulation", "Game AI"],
+    to: "/projects/ai-ml/horde",
+    icon: "AIML",
+    category: "AI/Machine Learning",
+  },
 ];
 
 export const projectCategories = [
