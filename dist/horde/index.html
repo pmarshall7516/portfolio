@@ -18,9 +18,53 @@
           window.__HORDE_API_URL__ = apiBase;
           window.__API_BASE__ = apiBase;
         }
+
+        if (apiBase && typeof window.fetch === "function") {
+          const originalFetch = window.fetch.bind(window);
+          const normalizedBase = apiBase.replace(/\/$/, "");
+          const normalizeUrl = (url) => {
+            if (!url) return null;
+            try {
+              const resolved = new URL(url, window.location.origin);
+              if (resolved.origin === window.location.origin && resolved.pathname.startsWith("/api/")) {
+                return `${normalizedBase}${resolved.pathname}${resolved.search}`;
+              }
+              if (resolved.hostname === "localhost" && resolved.port === "8000") {
+                return `${normalizedBase}${resolved.pathname}${resolved.search}`;
+              }
+            } catch (error) {
+              if (url.startsWith("/api/")) {
+                return `${normalizedBase}${url}`;
+              }
+              if (url.startsWith("http://localhost:8000/")) {
+                return url.replace("http://localhost:8000", normalizedBase);
+              }
+              if (url.startsWith("api/")) {
+                return `${normalizedBase}/${url}`;
+              }
+              if (url.startsWith("./api/")) {
+                return `${normalizedBase}${url.slice(1)}`;
+              }
+            }
+            return null;
+          };
+          window.fetch = (input, init) => {
+            const url = typeof input === "string" ? input : input?.url;
+            const nextUrl = typeof url === "string" ? normalizeUrl(url) : null;
+            if (nextUrl) {
+              if (typeof input === "string") {
+                return originalFetch(nextUrl, init);
+              }
+              if (input instanceof Request) {
+                return originalFetch(new Request(nextUrl, input), init);
+              }
+            }
+            return originalFetch(input, init);
+          };
+        }
       })();
     </script>
-    <script type="module" crossorigin src="./assets/index-B_9x0QvA.js"></script>
+    <script type="module" crossorigin src="./assets/index-BoY5bHY9.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-CzNy2-R4.css">
   </head>
   <body>

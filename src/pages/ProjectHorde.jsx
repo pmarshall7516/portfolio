@@ -3,11 +3,9 @@ import useIframeAutoHeight from "../hooks/useIframeAutoHeight.js";
 
 export default function ProjectHorde() {
   const baseUrl = import.meta.env.BASE_URL;
-  const apiBase = import.meta.env.VITE_HORDE_API_URL;
+  const apiBase = import.meta.env.VITE_HORDE_API_URL || "https://horde-server.onrender.com";
   const { frameRef, onLoad } = useIframeAutoHeight();
-  const iframeSrc = apiBase
-    ? `${baseUrl}horde/index.html?apiBase=${encodeURIComponent(apiBase)}`
-    : `${baseUrl}horde/index.html`;
+  const iframeSrc = `${baseUrl}horde/index.html?apiBase=${encodeURIComponent(apiBase)}`;
 
   return (
     <section className="page">
