@@ -156,10 +156,13 @@ AGENT_FILES = {
     "hard": "strong_difficulty_agent.pth",
 }
 
+AGENT_DIR = os.environ.get("HORDE_AGENT_DIR")
+
 
 def _agent_path(name: str) -> str:
     here = os.path.dirname(os.path.abspath(__file__))
-    return os.path.join(here, "react", "public", "agents", AGENT_FILES[name])
+    agent_dir = AGENT_DIR or os.path.join(here, "agents")
+    return os.path.join(agent_dir, AGENT_FILES[name])
 
 
 def _resolve_agent(spec: str, seed: int, env: HordeEnv) -> Optional[Any]:
